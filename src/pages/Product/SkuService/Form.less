@@ -1,0 +1,126 @@
+@import '~antd/lib/style/themes/default.less';
+
+.card {
+  margin-bottom: 24px;
+}
+
+.heading {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.steps:global(.ant-steps) {
+  max-width: 750px;
+  margin: 16px auto;
+}
+
+.errorIcon {
+  margin-right: 24px;
+  color: @error-color;
+  cursor: pointer;
+
+  i {
+    margin-right: 4px;
+  }
+}
+
+.errorPopover {
+  :global {
+    .ant-popover-inner-content {
+      min-width: 256px;
+      max-height: 290px;
+      padding: 0;
+      overflow: auto;
+    }
+  }
+}
+
+.errorListItem {
+  padding: 8px 16px;
+  list-style: none;
+  border-bottom: 1px solid @border-color-split;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: @primary-1;
+  }
+
+  &:last-child {
+    border: 0;
+  }
+
+  .errorIcon {
+    float: left;
+    margin-top: 4px;
+    margin-right: 12px;
+    padding-bottom: 22px;
+    color: @error-color;
+  }
+
+  .errorField {
+    margin-top: 2px;
+    color: @text-color-secondary;
+    font-size: 12px;
+  }
+}
+
+.editable {
+  td {
+    background-color: #fff !important;
+    padding-top: 13px !important;
+    padding-bottom: 12.5px !important;
+  }
+}
+
+// custom footer for fixed footer toolbar
+.advancedForm + div {
+  padding-bottom: 64px;
+}
+
+.advancedForm {
+  :global {
+    .ant-form .ant-row:last-child .ant-form-item {
+      margin-bottom: 24px;
+    }
+
+    .ant-table td {
+      transition: none !important;
+    }
+
+    .ant-form-item-label {
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+
+  th {
+    background: #f1f1f1 !important;
+  }
+
+  td {
+    word-break: break-all;
+  }
+}
+
+.optional {
+  color: @text-color-secondary;
+  font-style: normal;
+}
+
+.bgWhite {
+  background: #fff !important;
+}
+
+.nobordInput {
+  border: none;
+  background: none !important;
+}
+
+.nobordInput:focus {
+  border-color: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  border-right-width: 0px !important;
+}

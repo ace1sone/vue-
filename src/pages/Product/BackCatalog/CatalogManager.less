@@ -1,0 +1,44 @@
+@import '~antd/lib/style/themes/default.less';
+
+@boderColor: #00000026;
+@cardHeight: calc(100vh - 310px);
+@cardMinHeight: 460px;
+
+.top {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.catalogContainer {
+  display: flex;
+  flex-direction: row;
+  height: @cardHeight;
+  min-height: @cardMinHeight;
+}
+
+.detailHeader {
+  margin-bottom: 18px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.detailTr {
+  display: flex;
+  direction: row;
+  margin-bottom: 18px;
+}
+
+.detailTdHalf {
+  width: 50%;
+}
+
+.detailTdItemKey {
+  display: inline-block;
+  width: 120px;
+}
+
+.titleDisable {
+  color: rgba(0, 0, 0, 0.25);
+}

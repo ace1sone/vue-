@@ -1,0 +1,130 @@
+@import '~antd/lib/style/themes/default.less';
+
+@boderColor: #00000026;
+
+.btn-new {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.catalog {
+  border: 1px solid @boderColor;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalogBehind {
+  .catalog;
+  border-left-width: 0;
+}
+
+.catalogTable {
+  flex: 1;
+  overflow: hidden;
+  :global {
+    .ant-table-small {
+      border: none;
+    }
+    .ant-table-thead {
+      background-color: @table-selected-row-bg;
+    }
+    .ant-table-placeholder {
+      border-bottom: none;
+    }
+    .ant-table-tbody > tr {
+      cursor: pointer;
+    }
+    .ant-table-tbody > tr > td {
+      border-bottom: none;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .ant-spin-nested-loading {
+      height: 100%;
+    }
+    .ant-spin-container {
+      height: 100%;
+    }
+    .ant-table {
+      height: 100%;
+    }
+    .ant-table-content {
+      height: 100%;
+    }
+    .ant-table-scroll {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ant-table-body {
+      flex: 1;
+    }
+  }
+}
+
+.rowSelected {
+  background-color: @item-hover-bg;
+  & > td:first-child {
+    position: relative;
+  }
+  & > td:first-child::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    background: @primary-color;
+  }
+}
+
+.catalogGroupHeader {
+  display: flex;
+  height: 48px;
+  flex-direction: row;
+  border-bottom: 1px solid @boderColor;
+  justify-content: space-between;
+}
+
+.catalogGroupHeaderNew {
+  .catalogGroupHeader;
+  height: 54px;
+}
+
+.catalogHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.catalogHeaderLeftNew {
+  .catalogHeaderLeft;
+  justify-content: space-between;
+}
+
+.catalogHeaderTitle {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalogUnAssignHeader {
+  margin-bottom: 2px;
+  margin-left: 10px;
+  color: @error-color;
+  font-size: 12px;
+  align-items: center;
+}
+
+.catalogHeaderRight {
+  display: flex;
+  align-items: center;
+}

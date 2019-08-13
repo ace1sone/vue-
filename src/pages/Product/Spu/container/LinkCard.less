@@ -1,0 +1,46 @@
+.card {
+  margin-bottom: 20px;
+}
+@gray: rgba(0, 0, 0, 0.04);
+.gray {
+  background-color: @gray;
+}
+
+.card-item {
+  margin-bottom: 24px;
+  .card-item-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    line-height: 22px;
+  }
+  .card-item-content {
+    margin-left: 10px;
+  }
+  .add-action {
+    cursor: pointer;
+    color: #3b99fd;
+    margin-left: 16px;
+  }
+  .danger-action {
+    cursor: pointer;
+    color: #f5222d;
+    margin-left: 24px;
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.table {
+  :global {
+    .ant-table-placeholder {
+      background-color: transparent;
+      border-bottom: none;
+    }
+  }
+}
+
+.large-btn {
+  color: rgba(0, 0, 0, 0.65);
+}

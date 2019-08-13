@@ -1,0 +1,23 @@
+.sticky {
+  position: fixed;
+  right: 0;
+  // left: 0;
+  // width: 100%;
+  width: calc(100vw - 256px);
+  // display: flex;
+  // justify-content: flex-end;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  &.collapsed {
+    width: calc(100vw - 80px);
+  }
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}

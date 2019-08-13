@@ -1,0 +1,88 @@
+@red: red;
+@blue: #3b99fd;
+
+.card {
+  margin-bottom: 24px;
+  background-color: white;
+}
+
+.cardContent {
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.buttonNormal {
+  color: @blue;
+  &:hover {
+    color: fade(@blue, 50%);
+  }
+}
+
+.buttonDanger {
+  color: @red;
+  &:hover {
+    color: fade(@red, 50%);
+  }
+}
+
+.nobordInput {
+  border: none;
+  background: none !important;
+}
+
+.nobordInput:focus {
+  border-color: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  border-right-width: 0 !important;
+}
+
+.cardSection {
+  background: #f9f9f9;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+.tableWhite {
+  background-color: white;
+}
+
+.bgWhite {
+  background: #fff;
+}
+
+.advancedForm + div {
+  padding-bottom: 64px;
+}
+
+.advancedForm {
+  :global {
+    .ant-form .ant-row:last-child .ant-form-item {
+      margin-bottom: 24px;
+    }
+
+    .ant-table td {
+      transition: none !important;
+    }
+
+    .ant-form-item-label {
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+
+  th {
+    background: #f1f1f1 !important;
+  }
+
+  td {
+    word-break: break-all;
+  }
+}
+
+// .footerBar {
+//   padding: 0 12px;
+//   margin: 0 12px;
+//   position: relative;
+// }

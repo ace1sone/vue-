@@ -1,0 +1,83 @@
+.container {
+    height        : 100%;
+    padding-bottom: 84px;
+}
+
+.darkBtn {
+    background: rgba(0, 0, 0, 0.85);
+    color     : white
+}
+
+.hackRow {
+    :global {
+        .ant-form-item {
+            margin-bottom: 1rem;
+
+            .ant-form-item-label {
+                text-align : left;
+                width      : 156px;
+                font-weight: 600;
+            }
+        }
+        .ant-row {
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.Spec {
+    height     : 22px;
+    font-size  : 14px;
+    font-weight: 400;
+    color      : rgba(0, 0, 0, 0.45);
+    line-height: 22px;
+    padding: 1rem 0 2rem 0;
+}
+
+.footer {
+    width: 100%;
+    margin          : 0 auto;
+    left            : 0;
+    right           : 0;
+    position        : fixed;
+    display         : flex;
+    justify-content : flex-end;
+    align-items     : center;
+    bottom          : 0;
+    height          : 56px;
+    box-shadow      : 0px -1px 2px 0px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+
+    button:nth-child(2),
+    button:nth-child(3) {
+        margin-left: 24px;
+    }
+}
+
+.uploadComponent {
+    :global {
+        width: 128px;
+        height: 128px;
+        display: block;
+
+        .ant-upload-list-picture-card .ant-upload-list-item{
+            width: 128px;
+            height: 128px;
+        }
+
+        .ant-upload {
+            width : 128px;
+            height: 128px;
+        }
+    }
+}
+
+.TextAreaRow {
+    :global {
+        width: 100%;
+
+        .ant-form-item-control-wrapper {
+            width: 80%
+        }
+    }
+}

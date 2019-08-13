@@ -1,0 +1,57 @@
+.darkBtn {
+    background: rgba(0, 0, 0, 0.85);
+    color     : white
+}
+
+.mr24 {
+    margin-right: 24px;
+}
+
+.floatRight {
+    float       : right;
+    margin-right: 0;
+
+    :global {
+        margin-right: 0 !important;
+    }
+}
+
+.mb1rem {
+    margin-bottom: 1rem;
+}
+
+.mr24px {
+    margin-right: 24px;
+}
+
+.hackPaginationActiveItem {
+
+    :global {
+        .ant-pagination-item-active {
+            background: rgba(0, 0, 0, 0.85);
+            border    : rgba(0, 0, 0, 0.85);
+
+            a {
+                color: white;
+            }
+        }
+
+        tr:hover td {
+            background: transparent !important;
+        }
+    }
+}
+
+.onPaginationLeft {
+    position: absolute;
+    left    : 0;
+}
+
+.bottomCheckbox {
+    padding-left: 20px;
+    font-weight : 600;
+
+    .checkAllText {
+        padding: 0 1rem;
+    }
+}

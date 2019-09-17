@@ -12,6 +12,7 @@ import { routes as ContentManagmentRoutes } from '../src/pages/ContentMgmt';
 import { routes as ConfigurationRoutes } from '../src/pages/Configuration';
 import { routes as storyRoutes } from '../src/pages/Story';
 import { routes as tagsRoutes } from '../src/pages/Tags';
+import { routes as AlterGoods } from '../src/pages/AlterGoods';
 
 export default [
   {
@@ -191,6 +192,7 @@ export default [
       ...ContentManagmentRoutes,
       ...ConfigurationRoutes,
       ...tagsRoutes,
+      ...AlterGoods,
       {
         component: './exception-404',
       },

@@ -181,4 +181,9 @@ export default {
   // 标签管理
   'menu.tags': '标签管理',
   'menu.tags.allTags': '全部标签',
+
+  // ALTER商品管理
+  'menu.AlterGoods': 'ALTER商品管理',
+  'menu.AlterGoods.AlterFliter': '商品筛选',
+  'menu.AlterGoods.AlterMap': '商品映射',
 };

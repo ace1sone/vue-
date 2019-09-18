@@ -11,13 +11,15 @@ class List extends React.Component {
     this.goodsRoute = '';
     this.state = {
       titletext: '',
+      current: 1,
+      name: '',
     };
   }
 
   componentWillMount = () => {
     this.getLocationName();
     this.getPageTitle();
-    this.loadList();
+    this.loadList(1);
   };
 
   componentWillReceiveProps = nextProps => {
@@ -28,12 +30,13 @@ class List extends React.Component {
     }
   };
 
-  loadList = async () => {
+  loadList = async page => {
     const { dispatch } = this.props;
+    this.setState({ current: page });
     await dispatch({
       type: 'orderData/getOrder',
       payload: {
-        current: 1,
+        current: page,
         size: 10,
       },
     });
@@ -62,15 +65,55 @@ class List extends React.Component {
     this.setState({ titletext: text });
   };
 
-  render() {
-    const { orderData } = this.props;
+  goSearch = () => {
+    const { dispatch } = this.props;
+    const { name } = this.state;
+    console.log(name);
+    if (name === '') {
+      dispatch({
+        type: 'orderData/getOrder',
+        payload: {
+          current: 1,
+          size: 10,
+        },
+      });
+    } else {
+      dispatch({
+        type: 'orderData/getOrder',
+        payload: {
+          current: 1,
+          size: 10,
+          name,
+        },
+      });
+    }
+  };
 
-    const { titletext } = this.state;
+  getInputValue = (value, text) => {
+    switch (text) {
+      case 'name':
+        this.state.name = value;
+        break;
+      default:
+        break;
+    }
+    console.log(111111, value, text);
+  };
+
+  render() {
+    const { orderData, loading } = this.props;
+    const { total } = orderData;
+    const { titletext, current } = this.state;
+    const pagination = {
+      onChange: this.loadList,
+      current,
+      total,
+    };
     return (
       <PageHeaderWrapper title={titletext}>
         <Card>
-          <TableHeader />
-          <TableContent data={orderData.records} />
+          <TableHeader getInputValue={this.getInputValue} search={this.goSearch} />
+          <TableContent loading={loading} pagination={pagination} data={orderData.records} />
         </Card>
       </PageHeaderWrapper>
     );

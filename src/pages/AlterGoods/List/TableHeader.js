@@ -5,14 +5,25 @@ import { Button } from 'antd/lib/radio';
 const { Option } = Select;
 
 class TableHeader extends React.Component {
-  state = {};
+  state = {
+    name: '',
+  };
+
+  nameGet = e => {
+    const { getInputValue } = this.props;
+    getInputValue(e.target.value, 'name');
+    this.setState({ name: e.target.value });
+    console.log(222222, e.target.value);
+  };
 
   render() {
+    const { name } = this.state;
+    const { search } = this.props;
     return (
       <div>
         <div style={{ marginTop: 12, marginBottom: 24 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Input style={{ width: 200, marginRight: 24 }} placeholder="请输入商品名称" />
+            <Input style={{ width: 200, marginRight: 24 }} value={name} onChange={this.nameGet} placeholder="请输入商品名称" />
             <Input style={{ width: 200, marginRight: 24 }} placeholder="请输入品牌名称" />
             <Input style={{ width: 200, marginRight: 96 }} placeholder="请输入分类名称" />
             <span style={{ fontWeight: 700 }}>吊牌价：</span>
@@ -30,7 +41,9 @@ class TableHeader extends React.Component {
               </Select>
             </div>
             <div>
-              <Button style={{ marginRight: 24, background: 'black', color: 'white', borderRadius: 5 }}>搜索</Button>
+              <Button style={{ marginRight: 24, background: 'black', color: 'white', borderRadius: 5 }} onClick={search}>
+                搜索
+              </Button>
 
               <Button style={{ marginRight: 24, borderRadius: 6 }}>清空</Button>
             </div>

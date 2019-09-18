@@ -67,7 +67,7 @@ class TableContent extends React.Component {
       },
       {
         title: '吊牌价',
-        key: 8,
+        dataIndex: 'orderNo',
       },
       {
         title: '操作',
@@ -84,10 +84,10 @@ class TableContent extends React.Component {
   };
 
   render() {
-    const { data } = this.props;
+    const { data, pagination, loading } = this.props;
     return (
       <div>
-        <Table rowKey="orderNo" columns={this.renderColumns} dataSource={data} />
+        <Table loading={loading} pagination={pagination} rowKey="orderNo" columns={this.renderColumns} dataSource={data} />
       </div>
     );
   }

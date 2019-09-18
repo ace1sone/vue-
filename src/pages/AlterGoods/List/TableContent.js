@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'antd';
 import { getImgSrc } from '@/utils/utils';
+import router from 'umi/router';
 
 class TableContent extends React.Component {
   constructor() {
@@ -72,9 +73,9 @@ class TableContent extends React.Component {
       {
         title: '操作',
         key: 9,
-        render: () => (
+        render: item => (
           <div style={{ width: 60 }}>
-            <a>添加映射</a>
+            <a onClick={() => router.push(`/alterGoods/alterFliter/detail/${item.orderNo}`)}>添加映射</a>
             <a>商品详情</a>
           </div>
         ),

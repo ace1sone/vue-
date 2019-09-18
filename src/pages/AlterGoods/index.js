@@ -16,6 +16,7 @@ exports.routes = [
           {
             path: '/alterGoods/alterFliter/detail/:id',
             name: 'Detail',
+            component: './AlterGoods/Detail',
           },
           {
             path: '/alterGoods/alterFliter/addMap/:id',
